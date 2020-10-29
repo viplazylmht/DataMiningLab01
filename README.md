@@ -1,8 +1,8 @@
 # DataMining Lab 01 - Preprocessing
 
-# Hou to use
+# How to use
 
-Note: Feel free to pass `-h` option to show help each command.
+Note: Feel free to pass `-h` option to show help each of command.
 
 1. List column that missing data
 
