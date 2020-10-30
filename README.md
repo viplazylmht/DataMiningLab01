@@ -10,7 +10,7 @@ Note: Feel free to pass `-h` option to show help each of command.
     python3 list_missing.py test/house-prices.csv --extra
     ```
 
-2. Count column that missing data
+2. Count rows that missing data
 
     ```bash
     python3 count_missing.py test/house-prices.csv
