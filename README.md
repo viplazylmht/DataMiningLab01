@@ -46,7 +46,7 @@ Note: Feel free to pass `-h` option to show help each of command.
 
 8. Clustering
 
-
-
-
+    ```bash
+    python3 clustering.py house-prices.csv YrSold + SalePrice * 2 --cname Total
+    ```
 
