@@ -44,7 +44,7 @@ Note: Feel free to pass `-h` option to show help each of command.
     python3 feature_scaling.py test/house-prices.csv --column PoolArea YrSold --method zscore
     ```
 
-8. Clustering
+8. Calculate the value of attributes expressions  
     For Windows
     ```bash
     python3 calculating_attributes_expressions.py test/house-prices.csv YrSold + SalePrice * 2 --cname Total
