@@ -21,8 +21,7 @@ def getMissingRate(listRow, key):
     """
     num = getColumn(listRow, key).count("")
     return 0 if (len(listRow) == 0) else num / len(listRow)
-
-
+    
 def list_missing_column(filename, extra=False):
     """
     Function to list missing value each file 
@@ -35,6 +34,7 @@ def list_missing_column(filename, extra=False):
         reader = csv.DictReader(csvfile)
         listRow = [row for row in reader]
 
+    #list of columns and amount is missing data
     l = {key: getColumn(listRow, key).count("") for key in listRow[0].keys()}
     rowCount = len(listRow)
 

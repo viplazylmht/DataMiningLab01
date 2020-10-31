@@ -7,7 +7,8 @@ from impute import write_file
 
 def remove_dup(listData):
     """
-    return new listData
+    Delete duplicate instances
+    and return new listData.
     """
     res = []
 
@@ -45,4 +46,5 @@ if (__name__ == '__main__'):
     listRow = remove_dup(listRow)
     
     write_file(fout, listRow)
+    print("\nSaved to {}".format(fout))
 

@@ -8,7 +8,7 @@ from impute import evaluateColumnType, evaluateColumnTypeV2, write_file
 
 def normalize_column(filename, column, method="minmax", fout="result.csv"):
     """
-    Function to normalize dataset with a specified columns
+    Function to normalize dataset with the specified columns
     """
 
     listRow = []
@@ -18,7 +18,7 @@ def normalize_column(filename, column, method="minmax", fout="result.csv"):
         listRow = [row for row in reader]
 
     if (column == None or len(column) == 0):
-        # reassign column with all numerical col
+        # Get all the columns with the type data is numberical in data set
         column = [key for key in listRow[0].keys(
         ) if evaluateColumnType(listRow, key) == 'numerical']
 
@@ -41,7 +41,7 @@ def normalize_column(filename, column, method="minmax", fout="result.csv"):
             print("{:20s}{:20s}{}".format(key, typ, "Skipped"))
             continue
 
-        # get a column without missing val and convert into number
+        # get a column without missing value and convert into number
         lst = [float(val) for val in l if val != ""]
 
         # follow this link for more details:

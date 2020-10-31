@@ -45,8 +45,12 @@ Note: Feel free to pass `-h` option to show help each of command.
     ```
 
 8. Clustering
-
+    For Windows
     ```bash
-    python3 clustering.py house-prices.csv YrSold + SalePrice * 2 --cname Total
+    python3 calculating_attributes_expressions.py test/house-prices.csv YrSold + SalePrice * 2 --cname Total
+    ```
+    For Linux
+    ```bash
+    python3 calculating_attributes_expressions.py test/house-prices.csv YrSold + SalePrice \* 2 --cname Total
     ```
 

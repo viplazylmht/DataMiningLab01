@@ -6,7 +6,8 @@ from impute import write_file
 
 def remove_row_missing(listData, rate):
     """
-    return new listData
+    Delete rows with missing data with a given missing rate threshold
+    and return new listData
     """
     res = []
 
@@ -27,7 +28,8 @@ def remove_row_missing(listData, rate):
 
 def remove_col_missing(listData, rate):
     """
-    return new listData
+    Delete rows with missing data with a given missing rate threshold
+    and return new listData
     """
 
     res = [row.copy() for row in listData]
@@ -74,3 +76,4 @@ if (__name__ == '__main__'):
         listRow = remove_row_missing(listRow, rate)
 
     write_file(fout, listRow)
+    print("\nSaved to {}".format(fout))

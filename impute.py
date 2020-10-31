@@ -140,6 +140,7 @@ def fill_missing_column(filename, column, method="auto", fout="result.csv"):
             continue
         
         l = getColumn(listRow, key)
+        #Calculate the value to fill in the missing data
         fill = get_fill_value(l, method)
 
         for row in listRow:

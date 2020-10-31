@@ -4,8 +4,7 @@ import csv
 
 def count_missing_row(filename):
     """
-    Function to list missing value each file 
-    return an array of string line instead of print out all line to console
+    Function to count lines is missing data
     """
     res = 0
     listRow = []
@@ -18,13 +17,12 @@ def count_missing_row(filename):
     rowCount = len(listRow)
     if (rowCount == 0):
         return res
-
-    for row in listRow:
-        count = sum([1 for val in row.values() if val == ""])
         
-        if count > 0:
+    #Check missing value in dataset
+    for row in listRow:
+        if "" in row.values():
             res += 1
-
+            
     return res
 
 if (__name__ == '__main__'):
